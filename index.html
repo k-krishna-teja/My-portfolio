@@ -138,6 +138,32 @@
       color: #475569;
       text-align: center;
     }
+    .skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.skill {
+  background: #e0e7ff;
+  color: #1e3a8a;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.skill.cloud {
+  background: #e6f6ff;
+  color: #075985;
+}
+
+.skill.devops {
+  background: #fff7ed;
+  color: #9a3412;
+}
+
 
     #mindset .project {
       border-left-color: #f59e0b;
@@ -172,6 +198,48 @@
       <a href="mailto:your_email@example.com">Email</a>
     </div>
   </header>
+  <section>
+  <h2>Skills & Tooling</h2>
+
+  <div class="project">
+    <h3>Frontend & Application Development</h3>
+    <div class="skills">
+      <span class="skill">HTML</span>
+      <span class="skill">CSS</span>
+      <span class="skill">JavaScript</span>
+      <span class="skill">React</span>
+      <span class="skill">Flutter</span>
+    </div>
+  </div>
+
+  <div class="project">
+    <h3>Backend & Frameworks</h3>
+    <div class="skills">
+      <span class="skill">Node.js</span>
+      <span class="skill">CodeIgniter</span>
+    </div>
+  </div>
+
+  <div class="project">
+    <h3>AWS Cloud</h3>
+    <div class="skills">
+      <span class="skill cloud">EC2</span>
+      <span class="skill cloud">S3</span>
+      <span class="skill cloud">IAM</span>
+      <span class="skill cloud">VPC</span>
+    </div>
+  </div>
+
+  <div class="project">
+    <h3>DevOps & CI/CD</h3>
+    <div class="skills">
+      <span class="skill devops">GitHub Actions</span>
+      <span class="skill devops">CI/CD Pipelines</span>
+      <span class="skill devops">Git</span>
+    </div>
+  </div>
+</section>
+
 
   <!-- PROJECTS -->
   <section>
