@@ -12,8 +12,8 @@
 
   body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    background-color: #f4f6f8;
-    color: #1f2933;
+    background-color: #eef2f7;
+    color: #1f2937;
     max-width: 920px;
     margin: 0 auto;
     padding: 50px 20px;
@@ -26,27 +26,30 @@
 
   h1 {
     font-size: 2.4rem;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
+    color: #0f172a;
   }
 
   h2 {
     font-size: 1.6rem;
     margin-bottom: 20px;
-    border-bottom: 2px solid #e5e7eb;
     padding-bottom: 6px;
+    border-bottom: 3px solid #3b82f6;
+    color: #1e3a8a;
   }
 
   h3 {
     margin-top: 0;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
+    color: #0f172a;
   }
 
   p {
-    max-width: 750px;
+    max-width: 760px;
   }
 
   .contacts {
-    margin-top: 20px;
+    margin-top: 18px;
   }
 
   .contacts a {
@@ -66,24 +69,25 @@
 
   .project {
     background: #ffffff;
-    padding: 24px 26px;
+    padding: 26px 28px;
     margin-bottom: 26px;
-    border-radius: 10px;
-    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    border-left: 6px solid #60a5fa;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
     transition: transform 0.15s ease, box-shadow 0.15s ease;
   }
 
   .project:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    transform: translateY(-3px);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.08);
   }
 
   .project a {
     display: inline-block;
-    margin-top: 8px;
-    color: #2563eb;
+    margin-top: 10px;
+    color: #1d4ed8;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
   }
 
   .project a:hover {
@@ -93,11 +97,18 @@
   footer {
     margin-top: 80px;
     padding-top: 20px;
-    border-top: 1px solid #e5e7eb;
+    border-top: 1px solid #c7d2fe;
     font-size: 0.9rem;
-    color: #6b7280;
+    color: #475569;
+  }
+
+  /* subtle accent for mindset section */
+  section:last-of-type .project {
+    border-left-color: #f59e0b;
+    background: #fffbeb;
   }
 </style>
+
 
 </head>
 <body>
