@@ -3,62 +3,133 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Krishna Teja Karanakanti | AWS & DevOps Engineer</title>
+  <title>Krishna Teja | AWS & DevOps Engineer</title>
 
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f8f9fa;
-      color: #222;
-      max-width: 900px;
-      margin: 40px auto;
-      line-height: 1.6;
+    * {
+      box-sizing: border-box;
     }
 
-    h1, h2 {
-      color: #111;
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: #eef2f7;
+      color: #1f2937;
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 50px 20px;
+      line-height: 1.65;
     }
 
     header {
-      margin-bottom: 50px;
+      margin-bottom: 70px;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 6px;
+      color: #0f172a;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+      padding-bottom: 6px;
+      border-bottom: 3px solid #3b82f6;
+      color: #1e3a8a;
+    }
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 6px;
+      color: #0f172a;
+    }
+
+    p {
+      max-width: 760px;
+    }
+
+    .contacts {
+      margin-top: 18px;
     }
 
     .contacts a {
-      margin-right: 15px;
+      margin-right: 16px;
       text-decoration: none;
-      color: #0366d6;
+      color: #2563eb;
       font-weight: 500;
+    }
+
+    .contacts a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      margin-bottom: 70px;
     }
 
     .project {
       background: #ffffff;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 6px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      padding: 26px 28px;
+      margin-bottom: 26px;
+      border-radius: 12px;
+      border-left: 6px solid #60a5fa;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 28px rgba(0,0,0,0.08);
+    }
+
+    .project img {
+      width: 100%;
+      max-width: 760px;
+      margin: 14px 0;
+      border-radius: 10px;
+      border: 1px solid #e5e7eb;
     }
 
     .project a {
-      color: #0366d6;
+      display: inline-block;
+      margin-top: 10px;
+      color: #1d4ed8;
       text-decoration: none;
+      font-weight: 600;
+    }
+
+    .project a:hover {
+      text-decoration: underline;
     }
 
     footer {
-      margin-top: 60px;
-      font-size: 0.9em;
-      color: #555;
+      margin-top: 80px;
+      padding-top: 20px;
+      border-top: 1px solid #c7d2fe;
+      font-size: 0.9rem;
+      color: #475569;
+    }
+
+    /* mindset highlight */
+    #mindset .project {
+      border-left-color: #f59e0b;
+      background: #fffbeb;
     }
   </style>
 </head>
 <body>
 
-  <!-- HEADER / INTRO -->
+  <!-- HEADER -->
   <header>
     <h1>Krishna Teja Karnakanti</h1>
+    <p style="color:#6b7280; font-size:0.95rem;">
+      Designing cloud systems that behave well under pressure.
+    </p>
+
     <p>
-      AWS & DevOps Engineer specializing in cloud infrastructure, automation,
-      and scalable deployments. Experienced with AWS core services such as
-      EC2, IAM, VPC, and S3 as part of real team projects.
+      AWS & DevOps Engineer focused on cloud infrastructure, secure access
+      control, and predictable deployments. Hands-on experience with EC2,
+      IAM, VPC, and S3 through team-based projects.
     </p>
 
     <div class="contacts">
@@ -66,54 +137,83 @@
       <a href="https://github.com/Domala-Unified-Aide-Services" target="_blank">
         Organization GitHub
       </a>
+      <a href="https://www.linkedin.com/in/krishna-teja-karnakanti-61a12828b/" target="_blank">
+        LinkedIn
+      </a>
       <a href="mailto:your_email@example.com">Email</a>
-      <a href="#" target="_blank">LinkedIn</a>
     </div>
   </header>
 
-  <!-- AWS & DEVOPS TEAM WORK -->
+  <!-- AWS & DEVOPS PROJECTS -->
   <section>
     <h2>AWS & DevOps Projects (Team Work)</h2>
 
     <div class="project">
-      <h3>E-Commerce CMS & Backend Infrastructure</h3>
+      <h3>E-Commerce CMS</h3>
+
+      <img src="ecommercecms.jpeg" alt="E-Commerce CMS project screenshot">
+
       <p>
-        Developed and deployed a full stack E-Commerce CMS with a web
-        admin panel, Flutter customer app, and backend services hosted on
-        AWS infrastructure.
+        E-Commerce Content Management System developed and deployed as part
+        of a team, supporting product management, administration, and
+        client-facing workflows.
       </p>
+
       <p>
-        Relevant AWS work included provisioning and managing EC2 compute
-        instances, configuring S3 storage, designing secure VPC networking,
-        and managing IAM roles and permissions for deployment workflows.
+        AWS work included EC2 provisioning, IAM role and policy configuration,
+        VPC networking setup, and S3-based storage integration.
       </p>
-      <a href="https://github.com/Domala-Unified-Aide-Services/E-Commerce-CMS-with-Flutter-App-Web-Admin-Panel" target="_blank">
+
+      <a href="https://github.com/Domala-Unified-Aide-Services/E-Commerce-CMS-with-Flutter-App-Web-Admin-Panel"
+         target="_blank">
         View Repository →
       </a>
     </div>
 
     <div class="project">
-      <h3>To-Do Application (Team Contribution)</h3>
+      <h3>To-Do Application</h3>
+
+      <img src="todo.jpeg" alt="To-do application screenshot">
+
       <p>
-        Lightweight task management application developed as part of the
-        organization’s repository set. Focused on collaborative version
-        control and incremental feature delivery.
+        Collaborative to-do application built to manage tasks and workflows,
+        emphasizing clean structure, team collaboration, and incremental
+        feature development.
       </p>
-      <a href="https://github.com/Domala-Unified-Aide-Services/To-do-application" target="_blank">
+
+      <a href="https://github.com/Domala-Unified-Aide-Services/To-do-application"
+         target="_blank">
+        View Repository →
+      </a>
+    </div>
+
+    <div class="project">
+      <h3>Speech-to-Streaming (STOS)</h3>
+
+      <img src="stos.jpeg" alt="Speech to streaming project screenshot">
+
+      <p>
+        Speech-to-Streaming project focused on capturing spoken input and
+        streaming processed output, used to explore real-time data flow,
+        application structure, and deployment considerations.
+      </p>
+
+      <a href="https://github.com/Domala-Unified-Aide-Services/DAS-clone"
+         target="_blank">
         View Repository →
       </a>
     </div>
   </section>
 
-  <!-- PERSONAL SUPPORTING PROJECTS -->
+  <!-- SUPPORTING PROJECTS (NO IMAGES) -->
   <section>
-    <h2>Supporting Personal Projects</h2>
+    <h2>Supporting & Practice Projects</h2>
 
     <div class="project">
       <h3>Amazon Clone (Frontend Practice)</h3>
       <p>
-        Frontend UI project used to understand React component composition,
-        responsive layout, and state handling.
+        Frontend project created to understand UI layout, component structure,
+        and basic application flow. Included as a supporting exercise.
       </p>
       <a href="https://github.com/k-krishna-teja/amazon-" target="_blank">
         View Repository →
@@ -123,8 +223,8 @@
     <div class="project">
       <h3>FCC Solutions</h3>
       <p>
-        Coding exercises and solutions focusing on JavaScript and fundamental
-        programming concepts.
+        Collection of programming exercises and solutions focused on
+        JavaScript fundamentals and problem-solving.
       </p>
       <a href="https://github.com/k-krishna-teja/FCCSOLUTIONS" target="_blank">
         View Repository →
@@ -132,9 +232,10 @@
     </div>
 
     <div class="project">
-      <h3>React Project (Exploratory)</h3>
+      <h3>React Practice Project</h3>
       <p>
-        Experimental React app to practice component structure and state logic.
+        Experimental React project used to explore component-based UI
+        development and state handling.
       </p>
       <a href="https://github.com/k-krishna-teja/React-project-une" target="_blank">
         View Repository →
@@ -142,9 +243,31 @@
     </div>
   </section>
 
+  <!-- MINDSET -->
+  <section id="mindset">
+    <h2>Infrastructure Mindset</h2>
+
+    <div class="project">
+      <p>
+        I prioritize clarity, least-privilege access, and predictable system
+        behavior over unnecessary complexity.
+      </p>
+
+      <p>
+        I focus on understanding failure modes early—network boundaries,
+        IAM policies, instance lifecycle, and storage durability—so systems
+        fail safely instead of mysteriously.
+      </p>
+
+      <p>
+        Tools change. Principles don’t.
+      </p>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer>
-    <p>© 2026 Krishna Teja. Built with plain HTML & CSS.</p>
+    <p>© 2026 Krishna Teja. Built with plain HTML & CSS. Hosted on GitHub Pages.</p>
   </footer>
 
 </body>
