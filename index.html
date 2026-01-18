@@ -8,39 +8,41 @@
   <style>
     * {
       box-sizing: border-box;
+      scroll-behavior: smooth;
     }
 
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background-color: #eef2f7;
+      background: linear-gradient(180deg, #eef2f7, #ffffff);
       color: #1f2937;
-      max-width: 920px;
+      max-width: 960px;
       margin: 0 auto;
-      padding: 50px 20px;
+      padding: 60px 20px;
       line-height: 1.65;
     }
 
     header {
-      margin-bottom: 70px;
+      margin-bottom: 90px;
+      animation: fadeIn 1s ease forwards;
     }
 
     h1 {
-      font-size: 2.4rem;
+      font-size: 2.6rem;
       margin-bottom: 6px;
       color: #0f172a;
     }
 
     h2 {
-      font-size: 1.6rem;
-      margin-bottom: 20px;
-      padding-bottom: 6px;
+      font-size: 1.7rem;
+      margin-bottom: 26px;
+      padding-bottom: 8px;
       border-bottom: 3px solid #3b82f6;
       color: #1e3a8a;
     }
 
     h3 {
       margin-top: 0;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
       color: #0f172a;
     }
 
@@ -49,44 +51,70 @@
     }
 
     .contacts {
-      margin-top: 18px;
+      margin-top: 22px;
     }
 
     .contacts a {
-      margin-right: 16px;
+      margin-right: 18px;
       text-decoration: none;
       color: #2563eb;
-      font-weight: 500;
+      font-weight: 600;
+      position: relative;
     }
 
-    .contacts a:hover {
-      text-decoration: underline;
+    .contacts a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background: #2563eb;
+      left: 0;
+      bottom: -4px;
+      transition: width 0.2s ease;
+    }
+
+    .contacts a:hover::after {
+      width: 100%;
     }
 
     section {
-      margin-bottom: 70px;
+      margin-bottom: 90px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .project {
       background: #ffffff;
-      padding: 26px 28px;
-      margin-bottom: 26px;
-      border-radius: 12px;
+      padding: 28px 30px;
+      margin-bottom: 30px;
+      border-radius: 14px;
       border-left: 6px solid #60a5fa;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
     }
 
     .project:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 14px 28px rgba(0,0,0,0.08);
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+
+    .project.active {
+      border-left-color: #f59e0b;
+      background: #fffbeb;
     }
 
     .project img {
       width: 100%;
       max-width: 760px;
-      margin: 14px 0;
-      border-radius: 10px;
+      margin: 16px 0;
+      border-radius: 12px;
       border: 1px solid #e5e7eb;
     }
 
@@ -103,17 +131,22 @@
     }
 
     footer {
-      margin-top: 80px;
-      padding-top: 20px;
+      margin-top: 100px;
+      padding-top: 24px;
       border-top: 1px solid #c7d2fe;
       font-size: 0.9rem;
       color: #475569;
+      text-align: center;
     }
 
-    /* mindset highlight */
     #mindset .project {
       border-left-color: #f59e0b;
       background: #fffbeb;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -122,7 +155,7 @@
   <!-- HEADER -->
   <header>
     <h1>Krishna Teja Karnakanti</h1>
-    <p style="color:#6b7280; font-size:0.95rem;">
+    <p style="color:#6b7280; font-size:1rem;">
       Designing cloud systems that behave well under pressure.
     </p>
 
@@ -134,141 +167,115 @@
 
     <div class="contacts">
       <a href="https://github.com/k-krishna-teja" target="_blank">GitHub</a>
-      <a href="https://github.com/Domala-Unified-Aide-Services" target="_blank">
-        Organization GitHub
-      </a>
-      <a href="https://www.linkedin.com/in/krishna-teja-karnakanti-61a12828b/" target="_blank">
-        LinkedIn
-      </a>
+      <a href="https://github.com/Domala-Unified-Aide-Services" target="_blank">Org GitHub</a>
+      <a href="https://www.linkedin.com/in/krishna-teja-karnakanti-61a12828b/" target="_blank">LinkedIn</a>
       <a href="mailto:your_email@example.com">Email</a>
     </div>
   </header>
 
-  <!-- AWS & DEVOPS PROJECTS -->
+  <!-- PROJECTS -->
   <section>
     <h2>AWS & DevOps Projects (Team Work)</h2>
 
     <div class="project">
       <h3>E-Commerce CMS</h3>
-
-      <img src="ecommercecms.jpeg" alt="E-Commerce CMS project screenshot">
-
+      <img src="ecommercecms.jpeg" alt="E-Commerce CMS project">
       <p>
-        E-Commerce Content Management System developed and deployed as part
-        of a team, supporting product management, administration, and
-        client-facing workflows.
+        E-Commerce CMS supporting product management and admin workflows,
+        deployed on AWS infrastructure.
       </p>
-
       <p>
-        AWS work included EC2 provisioning, IAM role and policy configuration,
-        VPC networking setup, and S3-based storage integration.
+        Worked with EC2, IAM, VPC networking, and S3 storage integration.
       </p>
-
-      <a href="https://github.com/Domala-Unified-Aide-Services/E-Commerce-CMS-with-Flutter-App-Web-Admin-Panel"
-         target="_blank">
+      <a href="https://github.com/Domala-Unified-Aide-Services/E-Commerce-CMS-with-Flutter-App-Web-Admin-Panel" target="_blank">
         View Repository →
       </a>
     </div>
 
     <div class="project">
       <h3>To-Do Application</h3>
-
-      <img src="todo.jpeg" alt="To-do application screenshot">
-
+      <img src="todo.jpeg" alt="To-do application">
       <p>
-        Collaborative to-do application built to manage tasks and workflows,
-        emphasizing clean structure, team collaboration, and incremental
-        feature development.
+        Collaborative to-do application built to manage tasks and workflows
+        with clean structure and team collaboration.
       </p>
-
-      <a href="https://github.com/Domala-Unified-Aide-Services/To-do-application"
-         target="_blank">
+      <a href="https://github.com/Domala-Unified-Aide-Services/To-do-application" target="_blank">
         View Repository →
       </a>
     </div>
 
     <div class="project">
       <h3>Speech-to-Streaming (STOS)</h3>
-
-      <img src="stos.jpeg" alt="Speech to streaming project screenshot">
-
+      <img src="stos.jpeg" alt="Speech to streaming project">
       <p>
-        Speech-to-Streaming project focused on capturing spoken input and
-        streaming processed output, used to explore real-time data flow,
+        Speech-to-streaming project exploring real-time data flow,
         application structure, and deployment considerations.
       </p>
-
-      <a href="https://github.com/Domala-Unified-Aide-Services/DAS-clone"
-         target="_blank">
+      <a href="https://github.com/Domala-Unified-Aide-Services/DAS-clone" target="_blank">
         View Repository →
       </a>
     </div>
   </section>
 
-  <!-- SUPPORTING PROJECTS (NO IMAGES) -->
+  <!-- SUPPORTING -->
   <section>
     <h2>Supporting & Practice Projects</h2>
 
     <div class="project">
-      <h3>Amazon Clone (Frontend Practice)</h3>
-      <p>
-        Frontend project created to understand UI layout, component structure,
-        and basic application flow. Included as a supporting exercise.
-      </p>
-      <a href="https://github.com/k-krishna-teja/amazon-" target="_blank">
-        View Repository →
-      </a>
+      <h3>Amazon Clone</h3>
+      <p>Frontend UI practice project.</p>
+      <a href="https://github.com/k-krishna-teja/amazon-" target="_blank">View Repository →</a>
     </div>
 
     <div class="project">
       <h3>FCC Solutions</h3>
-      <p>
-        Collection of programming exercises and solutions focused on
-        JavaScript fundamentals and problem-solving.
-      </p>
-      <a href="https://github.com/k-krishna-teja/FCCSOLUTIONS" target="_blank">
-        View Repository →
-      </a>
+      <p>JavaScript problem-solving and fundamentals.</p>
+      <a href="https://github.com/k-krishna-teja/FCCSOLUTIONS" target="_blank">View Repository →</a>
     </div>
 
     <div class="project">
       <h3>React Practice Project</h3>
-      <p>
-        Experimental React project used to explore component-based UI
-        development and state handling.
-      </p>
-      <a href="https://github.com/k-krishna-teja/React-project-une" target="_blank">
-        View Repository →
-      </a>
+      <p>Exploration of component-based UI development.</p>
+      <a href="https://github.com/k-krishna-teja/React-project-une" target="_blank">View Repository →</a>
     </div>
   </section>
 
   <!-- MINDSET -->
   <section id="mindset">
     <h2>Infrastructure Mindset</h2>
-
     <div class="project">
-      <p>
-        I prioritize clarity, least-privilege access, and predictable system
-        behavior over unnecessary complexity.
-      </p>
-
-      <p>
-        I focus on understanding failure modes early—network boundaries,
-        IAM policies, instance lifecycle, and storage durability—so systems
-        fail safely instead of mysteriously.
-      </p>
-
-      <p>
-        Tools change. Principles don’t.
-      </p>
+      <p>Clarity over complexity. Predictability over cleverness.</p>
+      <p>Designing systems that fail safely and observably.</p>
+      <p>Tools change. Principles don’t.</p>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
-    <p>© 2026 Krishna Teja. Built with plain HTML & CSS. Hosted on GitHub Pages.</p>
+    © 2026 Krishna Teja · GitHub Pages
   </footer>
+
+  <!-- INTERACTIVITY -->
+  <script>
+    // reveal sections on scroll
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(sec => observer.observe(sec));
+
+    // click highlight project
+    document.querySelectorAll(".project").forEach(card => {
+      card.addEventListener("click", () => {
+        document.querySelectorAll(".project").forEach(c => c.classList.remove("active"));
+        card.classList.add("active");
+      });
+    });
+  </script>
 
 </body>
 </html>
